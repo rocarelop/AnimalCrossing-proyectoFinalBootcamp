@@ -79,7 +79,7 @@ width='250'>
 
 * El proyecto ha sido realizado en un plazo de unos 5-6 días. 
 * Realicé una presentación en clase con un power point, además de enseñar la funcionalidad de la web en directo, y, el cual adjunto en formato pdf; habrá algunas imágenes que no se visualicen correctamente ya que eran gifs para hacer más dinámica la presentación. 
-* Hace 9 semanas, cuando comencé este bootcamp, había visto muy poca programación, ya que, anteriormente me he estado trabajando como enfermera durante 7 años, ya que es la carrera que estudié, y, este ha sido mi primer contacto con el mundo de la programación para reinventarme y cambiar de profesión. 
+* Hace 9 semanas, cuando comencé este bootcamp, había visto muy poca programación, ya que, anteriormente he estado trabajando como enfermera durante 7 años, ya que es la carrera que estudié, y, este ha sido mi primer contacto con el mundo de la programación para reinventarme y cambiar de profesión. 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Quería agradecer esta oportunidad tanto al equipo de Ironhack como al de Accenture, han sido 9 semanas de muchísimo trabajo, pero ha merecido la pena por todo lo aprendido. Nunca imaginé que en tan poco tiempo iba a poder realizar un proyecto de estas características. 
 Gracias en especial a Víctor y Arnoldo, que han sido nuestros profesores y que han hecho todo esto posible. 
