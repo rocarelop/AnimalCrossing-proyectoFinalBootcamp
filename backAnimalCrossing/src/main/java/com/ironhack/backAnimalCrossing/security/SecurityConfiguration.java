@@ -18,9 +18,9 @@ public class SecurityConfiguration {
         http.httpBasic();
         http.csrf().disable();
         http.authorizeRequests()
-                //.antMatchers(HttpMethod.GET, "/island-leaders", "/island-leaders/**", "/islands","/islands/**", "/fishcatcheds","/fishcatcheds/**","/bugcatcheds","/bugcatcheds/**","/login").authenticated()
-                //.antMatchers(HttpMethod.POST, "/island-leaders", "/islands","/fishcatcheds","/bugcatcheds").authenticated()
-                //.antMatchers(HttpMethod.DELETE, "/island-leaders/**","/islands/**","/fishcatcheds/**","/bugcatcheds/**").authenticated()
+                .antMatchers(HttpMethod.GET, "/island-leaders", "/island-leaders/**", "/islands","/islands/**", "/fishcatcheds","/fishcatcheds/**","/bugcatcheds","/bugcatcheds/**","/login").authenticated()
+                .antMatchers(HttpMethod.POST, "/island-leaders", "/islands","/fishcatcheds","/bugcatcheds").authenticated()
+                .antMatchers(HttpMethod.DELETE, "/island-leaders/**","/islands/**","/fishcatcheds/**","/bugcatcheds/**").authenticated()
                 .anyRequest().permitAll();
         return http.build();
     }
