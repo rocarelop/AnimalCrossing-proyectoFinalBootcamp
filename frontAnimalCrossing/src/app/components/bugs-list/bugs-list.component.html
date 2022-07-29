@@ -1,0 +1,20 @@
+<app-menu></app-menu>
+<div class="bugs-grid">
+  <div class="box" *ngFor = "let bug of bugs | paginate: { itemsPerPage: 24, currentPage: page, totalItems: totalBugs }" >
+      <img [src]="bug.image_uri" alt="bug">
+      <p>
+      <b>Name: </b>{{ bug.name['name-EUes'] }}
+      </p>
+      <p>
+        <b>Price:</b> {{ bug.price }}<br>
+      </p>
+      <p>
+        <b>Location:</b>{{ bug.availability['location'] }}<br>
+      </p>
+      <p>
+        <b>Rarity:</b>{{ bug.availability['rarity'] }}<br>
+      </p>
+  </div>
+</div>
+
+<pagination-controls (pageChange)="page = $event; bugs = []; getBugs()"></pagination-controls>

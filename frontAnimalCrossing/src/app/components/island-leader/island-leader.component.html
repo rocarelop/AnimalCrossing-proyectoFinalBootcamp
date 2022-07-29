@@ -1,0 +1,54 @@
+<app-menu></app-menu>
+<h1>Create a new Island Leader: </h1>
+
+<div class="form-container">
+  <div>
+    <div class="gif"><iframe src="https://giphy.com/embed/kZzeRN1srSziS4zZhB" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/nintendo-switch-animal-crossing-kZzeRN1srSziS4zZhB"></a></p>
+  </div>
+  <div class="formu-add">
+  <form (ngSubmit)="onSubmit()" [formGroup]="islandLeaderForm">
+    <div class="input">
+      <div>
+        <input type="text" placeholder="Island Leader name" value="name"
+               formControlName="name">
+        <p class="error-msg" *ngIf="nameInput.hasError('required') &&
+              (nameInput.touched || nameInput.dirty)">
+          Name is required
+        </p>
+      </div>
+    </div>
+    <div class="input">
+      <div>
+        <input type="text" placeholder="hobby" value="hobby"
+            formControlName="hobby">
+        <p class="error-msg" *ngIf="hobbyInput.hasError('required') &&
+            (hobbyInput.touched || hobbyInput.dirty)">
+          Hobby is required
+        </p>
+      </div>
+      <div>
+        <button type="submit" [disabled]="islandLeaderForm.invalid">Submit</button>
+      </div>
+    </div>
+  </form>
+  </div>
+</div>
+<div class="islandLeader-container">
+  <ul>
+    <li *ngFor="let islandLeader of islandLeaderList">
+      <div class="list-container">
+        <img class="img-islandLeader" [src]="islandLeader.photo" [alt]="islandLeader.name">
+        <div class="islandLeader-info">
+          <p class="info">Id: {{islandLeader.id}}</p>
+          <p class="info">Name: {{islandLeader.name}}</p>
+          <p class="info">Hobby: {{islandLeader.hobby}}</p>
+        </div>
+      </div>
+      <button class="delete" (click)="deleteIslandLeader(islandLeader.id)"> DELETE ISLAND LEADER</button>
+    </li>
+  </ul>
+
+</div>
+
+<p-toast></p-toast>
+

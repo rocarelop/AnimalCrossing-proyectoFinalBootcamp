@@ -1,0 +1,36 @@
+.back{
+  background-color: #fbfeb2;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  padding: 10px;
+}
+
+
+.mat-card{
+  background-color: #dbbf9e;
+  color: #fbfeb2;
+  text-align: center;
+
+}
+.mat-card-title{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.mat-raised-button{
+  background-color:#74e0aa;
+  color: #fbfeb2;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+
+}

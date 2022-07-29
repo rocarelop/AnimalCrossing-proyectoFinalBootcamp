@@ -1,0 +1,68 @@
+<app-menu></app-menu>
+
+<h1>List of bugs catched: </h1>
+<div class="form-container">
+  <form (ngSubmit)="addBug()" #form="ngForm">
+<div class="input">
+
+    <div class="form-group">
+      <div>
+        <img src="https://static1-es.millenium.gg/articles/9/16/80/9/@/77280-interrupteur-de-passage-d39animaux-liste-des-classements-des-insectes-orig-1-article_cover_bd-1.png">
+      </div>
+      <h3>Name of Bug List:</h3>
+      <input  class="form-control"  name="name" type="text" placeholder="Name of list" [(ngModel)]="name" required  #nameInput="ngModel">
+      <p *ngIf="nameInput.invalid && nameInput.touched" class="error-msg">Name of list is required. </p>
+    </div>
+    <div class="form-group">
+      <h3>Id of Island Leader:</h3>
+      <input  class="form-control"  name="id" type="text" placeholder="Id of Island Leader" [(ngModel)]="id" required min="1" #idInput="ngModel">
+      <p *ngIf="idInput.invalid && idInput.touched" class="error-msg">Id of Island Leader is required. </p>
+    </div>
+<div>
+  <h3>Select a bug catched, please:</h3>
+      <select class="list" name='bug' [(ngModel)]="b" required #bugInput="ngModel">
+        <option selected [value] ="bugInput" disabled hidden> Select a bug </option>
+        <option *ngFor="let bug of bugs" [value]="bug.name['name-EUes']"> {{bug.name['name-EUes']}} </option>
+      </select>
+  </div>
+</div>
+<div class="add">
+<button type="submit" class="btn btn-primary" [disabled]="form.invalid">Add bug</button>
+</div>
+</form>
+<div class = "listbugs-container">
+  <table mat-table [dataSource]="bugCatched" class="mat-elevation-z8" #tabla1>
+
+    <ng-container class = "column" matColumnDef="idIslandLeader">
+      <th mat-header-cell *matHeaderCellDef> Id Island Leader </th>
+      <td mat-cell *matCellDef="let bug"> {{bug.idIslandLeader}} </td>
+    </ng-container>
+
+    <ng-container class = "column" matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> List Name </th>
+      <td mat-cell *matCellDef="let bug"> {{bug.name}} </td>
+    </ng-container>
+
+    <ng-container class = "column" matColumnDef="bugName">
+      <th mat-header-cell *matHeaderCellDef> Bug Name </th>
+      <td mat-cell *matCellDef="let bug"> {{bug.bugName}} </td>
+    </ng-container>
+
+    <ng-container class = "column" matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Delete </th>
+      <td mat-cell *matCellDef="let j = index;">
+        <div class="delete">
+        <button mat-raised-button color="warn" focusable="false" (click)="deleteBugCatched(j)">
+          Delete
+        </button>
+      </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+  </table>
+</div>
+
+
+

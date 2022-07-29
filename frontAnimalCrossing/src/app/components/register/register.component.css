@@ -1,0 +1,50 @@
+.card {
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.full-width {
+  width: 100%;
+}
+
+.register-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  text-align: center;
+  background-color: #74e0aa;
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.login-fields {
+  margin: auto 0;
+}
+
+.mat-card-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #74e0aa;
+
+}
+
+.mat-error{
+  color: #f28482;
+}
+
+.mat-raised-button {
+  background-color: #74e0aa;
+  color: #fbfeb2;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+}

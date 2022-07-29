@@ -1,0 +1,31 @@
+.header{
+  background-color: #74e0aa;
+  height: 150px;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  color: #fbfeb2;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  font-size: 80px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.subtitle{
+  color: #fbfeb2;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+
+
+

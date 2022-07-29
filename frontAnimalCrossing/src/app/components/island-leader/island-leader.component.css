@@ -1,0 +1,100 @@
+h1{
+  color: #74e0aa;
+  font-size: 30px;
+  margin: 10px;
+  text-shadow: black 0em 0.1em 0.1em;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+
+}
+.gif{
+  pointer-events: none;
+  margin-left: 40%;
+  max-width: 45%;
+  display: block;
+  margin-left: 1%;
+  border-radius: 10%;
+  float: right;
+  margin: 0.5% 15% 5% 0;
+ 
+
+}
+.error-msg {
+  color: #74e0aa;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.form-container {
+  margin-left: 6%;
+  margin-top: 1%;
+}
+
+.formu-add{
+  margin-top:5%;
+}
+
+input {
+  height: 60px;
+  width: 35%;
+  font-size: large;
+
+
+}
+button {
+  height: 60px;
+  width: 470px;
+  font-size: 20px;
+  background-color: #74e0aa;
+  color: #fff;
+}
+
+li{
+  list-style: none;
+}
+.img-islandLeader {
+  width: 10%;
+  height: 10%;
+  border-radius: 1%;
+  border: 2px solid #fff;
+  margin-right: 1%;
+}
+.islandLeader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 15%;
+  margin-left: 2%;
+  margin-right: 5%;
+}
+.delete{
+  background-color: #b7abdb;
+  border: #fff;
+  margin-left: 1%;
+  text-shadow: black 0em 0.1em 0.1em;
+  }
+.list-container {
+  background-color:  #74e0aa;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1%;
+}
+.islandLeader-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+.info{
+  justify-content: left;
+  color:#b7abdb;
+  font-size: 20px;
+  text-shadow: black 0.1em 0.1em 0.1em;
+  font-weight: bold;
+}
+
+

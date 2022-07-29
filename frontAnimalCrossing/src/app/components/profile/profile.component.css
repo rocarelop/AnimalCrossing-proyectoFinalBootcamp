@@ -1,0 +1,28 @@
+.gif
+{
+  pointer-events: none;
+  display: flex;
+  align-items: flex-start;
+  width: 5%;
+  height: 2%;
+  margin-left: 30%;
+
+}
+.gif1{
+  pointer-events: none;
+  display:flexbox;
+  align-items: flex-start;
+  width: 5%;
+  height: 2%;
+  margin-left: 500px;
+
+}
+.gif3{
+  pointer-events: none;
+  display:flexbox;
+  align-items: flex-start;
+  width: 5%;
+  height: 2%;
+  margin-left: -500px;
+
+}

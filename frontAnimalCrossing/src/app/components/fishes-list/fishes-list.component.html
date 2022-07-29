@@ -1,0 +1,23 @@
+<app-menu></app-menu>
+<div class="fishes-grid">
+  <div class="box" *ngFor = "let fish of fishes | paginate: { itemsPerPage: 24, currentPage: page, totalItems: totalFishes }" >
+      <img [src]="fish.image_uri" alt="fish">
+      <p>
+      <b>Name: </b>{{ fish.name['name-EUes'] }}
+      </p>
+      <p>
+          <b>Shadow:</b> {{ fish.shadow }}<br>
+      </p>
+      <p>
+          <b>Price:</b> {{ fish.price }}<br>
+      </p>
+      <p>
+          <b>Location:</b>{{ fish.availability['location'] }}<br>
+      </p>
+      <p>
+          <b>Rarity:</b>{{ fish.availability['rarity'] }}<br>
+      </p>
+  </div>
+</div>
+
+<pagination-controls (pageChange)="page = $event; fishes = []; getFishes()"></pagination-controls>

@@ -1,0 +1,23 @@
+<app-menu></app-menu>
+<div class="villagers-grid">
+  <div class="box" *ngFor = "let villager of villagers | paginate: { itemsPerPage: 24, currentPage: page, totalItems: totalVillagers }" >
+      <img [src]="villager.image_uri" alt="villager">
+      <p>
+      <b>Name: </b>{{ villager.name['name-EUes'] }}
+      </p>
+      <p>
+          <b>Personality:</b> {{ villager.personality }}<br>
+      </p>
+      <p>
+          <b>Birthday:</b> {{ villager.birthday }}<br>
+      </p>
+      <p>
+          <b>Specie:</b> {{ villager.species }}
+      </p>
+      <p>
+          <b>Gender:</b> {{ villager.gender }}
+      </p>
+  </div>
+</div>
+
+<pagination-controls (pageChange)="page = $event; villagers = []; getVillagers()"></pagination-controls>
