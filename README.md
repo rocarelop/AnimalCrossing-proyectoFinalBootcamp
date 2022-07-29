@@ -1,6 +1,6 @@
 # Proyecto final Bootcamp Ironhack-Accenture---Animal Crossing
 
-### ⚡ Proyecto de Animal Crossing para listar colecciones
+### 🍃 Proyecto de Animal Crossing para listar colecciones
 <p align="center">
     <img src = '5b4a216ec051e602a568cd7e.png'
 width='450'>
