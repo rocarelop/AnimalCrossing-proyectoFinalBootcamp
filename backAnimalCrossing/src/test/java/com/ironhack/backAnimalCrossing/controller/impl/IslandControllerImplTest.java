@@ -49,6 +49,8 @@ class IslandControllerImplTest {
 
        island1 = new Island("Island1");
        island2= new Island("Island2");
+       islandLeaderRepository.saveAll(islandLeader1, islandLeader2);
+       islandRepository.saveAll(island1, island2);
     }
 
     @AfterEach
@@ -64,7 +66,9 @@ class IslandControllerImplTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andReturn();
 
-        assertFalse(mvcResult.getResponse().getContentAsString().contains("islandss"));
+        assertTrue(mvcResult.getResponse().getContentAsString().contains("Island1"));
+        assertTrue(mvcResult.getResponse().getContentAsString().contains("Island2"));
+        assertFalse(mvcResult.getResponse().getContentAsString().contains("Island3"));
     }
 
     @Test
@@ -74,7 +78,8 @@ class IslandControllerImplTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andReturn();
 
-        assertFalse(mvcResult.getResponse().getContentAsString().contains("islandss"));
+        assertTrue(mvcResult.getResponse().getContentAsString().contains("Island1"));
+        assertFalse(mvcResult.getResponse().getContentAsString().contains("Island2"));
     }
 
 

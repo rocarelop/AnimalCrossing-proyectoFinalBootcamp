@@ -63,6 +63,7 @@ class IslandLeaderControllerImplTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andReturn();
 
+        assertTrue(mvcResult.getResponse().getContentAsString().contains("Pablo"));
         assertFalse(mvcResult.getResponse().getContentAsString().contains("paco"));
     }
 
@@ -73,7 +74,7 @@ class IslandLeaderControllerImplTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andReturn();
-
+        assertTrue(mvcResult.getResponse().getContentAsString().contains("Pablo"));
         assertFalse(mvcResult.getResponse().getContentAsString().contains("paco"));
     }
 

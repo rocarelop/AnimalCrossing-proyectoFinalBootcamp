@@ -55,6 +55,8 @@ class BugCatchedControllerImplTest {
         bugCatched1 = new BugCatched("insectos");
         bugCatched2 = new BugCatched("bichos");
 
+        islandLeaderRepository.saveAll(islandLeader1, islandLeader2);
+        bugCatchedRepository.saveAll(bugCatched1, bugCatched2);
 
     }
 
@@ -74,7 +76,9 @@ class BugCatchedControllerImplTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andReturn();
 
-        assertFalse(mvcResult.getResponse().getContentAsString().contains("peces"));
+        assertTrue(mvcResult.getResponse().getContentAsString().contains("insectos"));
+        assertTrue(mvcResult.getResponse().getContentAsString().contains("bichos"));
+        assertFalse(mvcResult.getResponse().getContentAsString().contains("pajaros"));
     }
 
 

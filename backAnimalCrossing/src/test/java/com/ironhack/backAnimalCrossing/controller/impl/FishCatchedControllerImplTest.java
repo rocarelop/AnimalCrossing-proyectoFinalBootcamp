@@ -52,6 +52,9 @@ class FishCatchedControllerImplTest {
 
         fishCatched1 = new FishCatched("peces");
         fishCatched2 = new FishCatched("pescados");
+
+        islandLeaderRepository.saveAll(islandLeader1, islandLeader2);
+        fishCatchedRepository.saveAll(fishCatched1, fishCatched2);
     }
 
     @AfterEach
@@ -67,7 +70,9 @@ class FishCatchedControllerImplTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andReturn();
 
-        assertFalse(mvcResult.getResponse().getContentAsString().contains("insectos"));
+        assertTrue(mvcResult.getResponse().getContentAsString().contains("peces"));
+        assertTrue(mvcResult.getResponse().getContentAsString().contains("pescados"));
+        assertFalse(mvcResult.getResponse().getContentAsString().contains("coquinas"));
     }
 
     @Test
@@ -77,7 +82,8 @@ class FishCatchedControllerImplTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andReturn();
 
-        assertFalse(mvcResult.getResponse().getContentAsString().contains("insectos"));
+        assertTrue(mvcResult.getResponse().getContentAsString().contains("peces"));
+        assertFalse(mvcResult.getResponse().getContentAsString().contains("pescados"));
     }
     @Test
     void deleteFishCatched() throws Exception {
